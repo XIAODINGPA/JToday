@@ -31,7 +31,6 @@ class AboutViewController: UIViewController {
 
         self .copyEmail()
     }
-    // JDateWidget
 
     func copyEmail ()  {
         let board = UIPasteboard.generalPasteboard()
