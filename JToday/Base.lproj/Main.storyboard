@@ -8,7 +8,7 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="JDateWidget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="JToday" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -17,7 +17,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon.png" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-ni-hmJ">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="AppIcon" translatesAutoresizingMaskIntoConstraints="NO" id="Dxj-ni-hmJ">
                                 <rect key="frame" x="103" y="143" width="114" height="119"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="119" id="2gw-qV-6hX"/>
@@ -58,7 +58,7 @@
         <!--Scroll View Controller-->
         <scene sceneID="k4k-Pz-EcA">
             <objects>
-                <viewController storyboardIdentifier="ScrollViewController" id="TOU-iA-plj" customClass="ScrollViewController" customModule="JDateWidget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScrollViewController" id="TOU-iA-plj" customClass="ScrollViewController" customModule="JToday" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="dmn-zm-Srk"/>
                         <viewControllerLayoutGuide type="bottom" id="kIe-EW-sJq"/>
@@ -91,7 +91,7 @@
         <!--About View Controller-->
         <scene sceneID="heg-78-fU1">
             <objects>
-                <viewController storyboardIdentifier="AboutViewController" id="FsG-ju-2YH" customClass="AboutViewController" customModule="JDateWidget" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AboutViewController" id="FsG-ju-2YH" customClass="AboutViewController" customModule="JToday" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cjI-yd-o2N"/>
                         <viewControllerLayoutGuide type="bottom" id="fKd-LS-qQw"/>
@@ -176,6 +176,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="AppIcon.png" width="1392" height="1457"/>
+        <image name="AppIcon" width="1392" height="1457"/>
     </resources>
 </document>

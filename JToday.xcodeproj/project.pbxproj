@@ -148,13 +148,13 @@
 		8B31E2851D1BAE6D0058F617 /* JToday */ = {
 			isa = PBXGroup;
 			children = (
-				8B31E2861D1BAE6D0058F617 /* AboutViewController.swift */,
 				8B31E2871D1BAE6D0058F617 /* AppDelegate.swift */,
-				8B31E28F1D1BAE6D0058F617 /* ScrollViewController.swift */,
 				8B31E2901D1BAE6D0058F617 /* ViewController.swift */,
+				8B31E28F1D1BAE6D0058F617 /* ScrollViewController.swift */,
+				8B31E2861D1BAE6D0058F617 /* AboutViewController.swift */,
 				8B31E2891D1BAE6D0058F617 /* Assets.xcassets */,
-				8B31E28A1D1BAE6D0058F617 /* LaunchScreen.storyboard */,
 				8B31E28C1D1BAE6D0058F617 /* Main.storyboard */,
+				8B31E28A1D1BAE6D0058F617 /* LaunchScreen.storyboard */,
 				8B31E28E1D1BAE6D0058F617 /* Info.plist */,
 			);
 			path = JToday;
