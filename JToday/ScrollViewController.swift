@@ -12,7 +12,6 @@ class ScrollViewController: UIViewController {
 
     @IBOutlet weak var scrollView: UIScrollView!
 
-
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -33,7 +32,10 @@ class ScrollViewController: UIViewController {
         for index in 1..<5
         {
             let imageView = UIImageView.init(image: UIImage.init(named:"\(index)"))
-            imageView.frame = CGRectMake((self.view.frame.size.width - imageViewWidth) / 2 ,padding + (imageViewHeight + padding) * CGFloat(index - 1),imageViewWidth,imageViewHeight)
+            imageView.frame = CGRectMake((self.view.frame.size.width - imageViewWidth) / 2 ,
+                                         padding + (imageViewHeight + padding) * CGFloat(index - 1),
+                                         imageViewWidth,
+                                         imageViewHeight)
 
             scroll.addSubview(imageView)
 

@@ -173,6 +173,7 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="vHb-DC-TjN" secondAttribute="trailing" id="1Pl-v6-4EA"/>
                             <constraint firstItem="vHb-DC-TjN" firstAttribute="top" secondItem="NLE-8i-DMN" secondAttribute="bottom" id="3KH-Dn-Zys"/>
+                            <constraint firstItem="1pK-7U-dzd" firstAttribute="width" secondItem="S3S-Oj-5AN" secondAttribute="width" id="5Uh-FF-DmA"/>
                             <constraint firstItem="vHb-DC-TjN" firstAttribute="leading" secondItem="S3S-Oj-5AN" secondAttribute="leading" id="7Ao-Bm-i8r"/>
                             <constraint firstItem="NLE-8i-DMN" firstAttribute="top" secondItem="S3S-Oj-5AN" secondAttribute="top" id="8Px-jn-iWl"/>
                             <constraint firstItem="FKl-LY-JtV" firstAttribute="top" secondItem="1pK-7U-dzd" secondAttribute="bottom" id="AQ3-De-Trg"/>
@@ -190,7 +191,8 @@
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
                     <size key="freeformSize" width="320" height="280"/>
                     <connections>
-                        <outlet property="detailContainerView" destination="1pK-7U-dzd" id="JV5-gg-I9b"/>
+                        <outlet property="detailContainerLayoutWidth" destination="5Uh-FF-DmA" id="BEb-cA-Pas"/>
+                        <outlet property="detailContainerView" destination="1pK-7U-dzd" id="LZy-Ba-IvK"/>
                         <outlet property="lastMonthButton" destination="hpi-c0-JJe" id="ksB-DR-2c0"/>
                         <outlet property="nextMonthButton" destination="Ljl-O3-oBa" id="eqj-gJ-NfM"/>
                         <outlet property="titleButton" destination="HBh-lN-lhz" id="O3m-OO-r9X"/>

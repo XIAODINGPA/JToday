@@ -12,9 +12,7 @@ let email = "hi@jinxiansen.com"
 
 class AboutViewController: UIViewController {
 
-
     @IBOutlet weak var versionLabel: UILabel!
-
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -136,11 +136,11 @@
 		8B1EBA2F1D1938A2002B88A6 /* JCalendarTarget */ = {
 			isa = PBXGroup;
 			children = (
-				8BDD220F1D1A6B540053C569 /* image */,
 				8B0800591D1A1D0000548EB8 /* MainInterface.storyboard */,
 				8B1EBA5C1D193968002B88A6 /* DateWidgetView.swift */,
 				8B1EBA4F1D193933002B88A6 /* TodayViewController.swift */,
 				8B1EBA4E1D193933002B88A6 /* Info.plist */,
+				8BDD220F1D1A6B540053C569 /* image */,
 			);
 			path = JCalendarTarget;
 			sourceTree = "<group>";
@@ -233,6 +233,7 @@
 					};
 					8B1EBA2A1D1938A2002B88A6 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 6RP225P6JQ;
 					};
 				};
 			};
@@ -437,6 +438,7 @@
 				PRODUCT_NAME = JToday;
 				PROVISIONING_PROFILE = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -453,6 +455,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.today;
 				PRODUCT_NAME = JToday;
 				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -460,6 +463,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JCalendarTarget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.today.JCalendarTarget;
@@ -474,6 +478,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = JCalendarTarget/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jinxiansen.today.JCalendarTarget;

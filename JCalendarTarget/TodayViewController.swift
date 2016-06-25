@@ -24,6 +24,9 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
     @IBOutlet weak var detailContainerView: UIView!
 
+    
+    @IBOutlet weak var detailContainerLayoutWidth: NSLayoutConstraint!
+
     var tempDate = NSDate()
 
     required init?(coder aDecoder: NSCoder) {
@@ -48,24 +51,25 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.configDayViews()
+
+        self.configDayViews(false)
     }
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        self.preferredContentSize = CGSizeMake(0, 315)
+        self.preferredContentSize = CGSizeMake(0, 365)
 
         imageView = UIImageView.init(image: UIImage.init(named:"选中当日"))
 
         dateFormatter.dateFormat = "yyyy MM dd"
         dateFormatter.timeZone = NSTimeZone.systemTimeZone()
 
-        self.loadData()
+        self.reloadWidgetView()
 
-        self.configDayViews()
         let tap = UITapGestureRecognizer.init(target: self, action: #selector(TodayViewController.jumpToApp))
         detailContainerView.addGestureRecognizer(tap)
+
     }
 
     func jumpToApp()
@@ -75,25 +79,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
         })
 
     }
-
-
-    func year(date:NSDate) -> NSInteger {
-        let components = NSCalendar.currentCalendar().components([.Year,.Month,.Day], fromDate: date)
-        return components.year
-    }
-
-    func month(date:NSDate) -> NSInteger {
-        let components = NSCalendar.currentCalendar().components([.Year,.Month,.Day], fromDate: date)
-        return components.month
-    }
-
-    func getNumberOfdaysInMonth(date:NSDate) -> NSInteger {
-        tempDate = date
-        let calendar = NSCalendar.init(identifier: NSCalendarIdentifierGregorian)
-        let range = calendar?.rangeOfUnit(NSCalendarUnit.Day, inUnit: NSCalendarUnit.Month, forDate: tempDate)
-        return (range?.length)!
-    }
-
 
     func loadData() {
         if currentCalendar == nil {
@@ -164,7 +149,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
     func reloadWidgetView() {
         self.loadData()
-        self.configDayViews()
+        self.configDayViews(true)
     }
 
     func newDate(date:NSDate,month:NSInteger) -> NSDate {
@@ -196,15 +181,17 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     }
 
 
-    func configDayViews () {
+    func configDayViews (showAnimated:Bool) {
         var changeFrame = false
 
         for var view in detailContainerView.subviews  {
             view.removeFromSuperview()
         }
 
-        UIView.animateWithDuration(0.15) {
-            self.detailContainerView.alpha = 0
+        if showAnimated {
+            UIView.animateWithDuration(0.15) {
+                self.detailContainerView.alpha = 0
+            }
         }
 
         for index in 0..<dataArray.count {
@@ -215,7 +202,7 @@ class TodayViewController: UIViewController, NCWidgetProviding {
                 continue
             }
 
-            let dayView = DateWidgetView.init(frame: CGRectMake( (CGFloat)(index % 7) * detailContainerView.bounds.size.width / 7, (CGFloat)( index / 7)*50, detailContainerView.bounds.size.width/7, 50))
+            let dayView = DateWidgetView.init(frame: CGRectMake( (CGFloat)(index % 7) * detailContainerView.bounds.width / 7, (CGFloat)( index / 7)*50, detailContainerView.bounds.width / 7, 50))
             dayView.dayLabel?.text = NSString.init(string: "\(dateComponents.day)") as String
             if chineseArray.count == dataArray.count {
                 dayView.classLabel?.text = chineseArray.objectAtIndex(index) as? String
@@ -254,19 +241,20 @@ class TodayViewController: UIViewController, NCWidgetProviding {
 
         if changeFrame {
  
-            UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.TransitionNone, animations: {
+           UIView.animateWithDuration(0.3) {
                 self.preferredContentSize = CGSizeMake(0, 365)
                 self.detailContainerView.bounds = CGRectMake(0, 0,screenWidth, 50 * 6)
-                }, completion: nil)
+            }
         }
         else{
-            UIView.animateWithDuration(0.3, delay: 0, options: UIViewAnimationOptions.TransitionNone, animations: {
+
+            UIView.animateWithDuration(0.3) {
                 self.preferredContentSize = CGSizeMake(0, 315)
                 self.detailContainerView.bounds = CGRectMake(0, 0,screenWidth, 50 * 6)
+            }
 
-                }, completion: nil)
         }
-        UIView.animateWithDuration(0.1) {
+        UIView.animateWithDuration(0.3) {
             self.detailContainerView.alpha = 1
         }
 
