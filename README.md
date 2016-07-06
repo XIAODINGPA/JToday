@@ -14,10 +14,12 @@ This is an extremely brief notification center calendar plugin (Swift).
  ![](6s-3.png)
 
  
-
 ## Author
 
-jinxiansen, email: hi@jinxiansen.com
+#####If you wish to contact me, email at: hi@jinxiansen.com
+
+####新浪微博 : [@晋先森](http://weibo.com/3205872327/)
+####Twitter : [@jinxiansen](https://twitter.com/jinxiansen)
 
 ## License
 

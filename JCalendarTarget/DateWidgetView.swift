@@ -37,7 +37,6 @@ class DateWidgetView: UIView {
         self.addSubview(dayLabel!)
         self.addSubview(classLabel!)
         self.addSubview(tipImageView!)
-
     }
     
     required init?(coder aDecoder: NSCoder) {
