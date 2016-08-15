@@ -23,7 +23,6 @@ class TodayViewController: UIViewController, NCWidgetProviding {
     @IBOutlet weak var weekNameContainerView: UIView!
 
     @IBOutlet weak var detailContainerView: UIView!
-
     
     @IBOutlet weak var detailContainerLayoutWidth: NSLayoutConstraint!
 
