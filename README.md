@@ -1,12 +1,11 @@
-# JToday
+## JToday
 This is an extremely brief notification center calendar plugin (Swift).
  
-##这是一个极简的通知中心日历插件
+###通知中心小日历
 
-(基于Xcode 7.3, Swift 2.2)
-####[![](JToday/app-store-logo.png)](https://itunes.apple.com/cn/app/id1127154449)
+#####(Xcode 7.3, Swift 2.2)
 
-***
+##screenshot
  <img src="JToday/6s-3.png" width="35%">
 
  
