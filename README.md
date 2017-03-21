@@ -1,7 +1,7 @@
 ## JToday
 This is an extremely brief notification center calendar plugin (Swift).
  
-###通知中心小日历
+### 通知中心小日历
 
 #####(Xcode 7.3, Swift 2.2)
 
